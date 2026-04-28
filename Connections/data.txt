@@ -1,0 +1,23 @@
+connections:
+ 
+L298N Pin  ESP32 Pin 
+IN1	           GPIO 26 
+IN2	           GPIO 27 
+IN3             GPIO 14 
+IN4	           GPIO 12 
+ENA	    GPIO 25 
+ENB	    GPIO 33 
+GND       	    GND 
+12V	            Battery +
+
+Power Setup
+Battery → L298N 12V
+L298N GND → ESP32 GND
+Motors → L298N OUT1, OUT2, OUT3, OUT4
+
+HC-SR04          ESP32
+───────          ─────
+  VCC    →           VIN   (5V)
+  GND    →           GND
+  TRIG   →            D13   (output)
+  ECHO   →          D34   (input-only, safe)
