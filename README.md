@@ -1,105 +1,128 @@
-# ESP32 Robotics Rover: 3-Mode Control
+<div align="center">
 
-An intelligent, WiFi-controlled robotics rover powered by the ESP32. This rover features an interactive web dashboard with three distinct operation modes: Manual Control, Obstacle Avoidance, and Smart Explorer.
+# 🤖 ESP32 Robotics Rover: 3-Mode Control Hub
 
----
+[![ESP32](https://img.shields.io/badge/ESP32-v2.0.17-blue?style=for-the-badge&logo=espressif)](https://www.espressif.com/en/products/socs/esp32)
+[![Arduino IDE](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)](https://www.arduino.cc/en/software)
+[![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)]()
+
+An intelligent, WiFi-controlled robotics rover powered by the ESP32. Featuring an interactive web dashboard with **Manual Control**, **Obstacle Avoidance**, and a **Smart Explorer** mode.
+
+<br>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yash_Developer-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yash-developer/)
+[![Instagram](https://img.shields.io/badge/Instagram-@yash.developer-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/yash.developer)
+
+</div>
+
+<hr>
 
 ## 📸 Project Showcase
 
-Here are some photos of the rover:
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.16%20PM.jpeg" width="30%" alt="Rover Photo 1">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM.jpeg" width="30%" alt="Rover Photo 2">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.18%20PM.jpeg" width="30%" alt="Rover Photo 3">
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(1).jpeg" width="46%" alt="Rover Photo 4">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(2).jpeg" width="46%" alt="Rover Photo 5">
-</div>
+<p align="center">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.16%20PM.jpeg" width="32%" alt="Rover Photo 1">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM.jpeg" width="32%" alt="Rover Photo 2">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.18%20PM.jpeg" width="32%" alt="Rover Photo 3">
+</p>
+<p align="center">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(1).jpeg" width="48%" alt="Rover Photo 4">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(2).jpeg" width="48%" alt="Rover Photo 5">
+</p>
 
 ---
 
-## ✨ Features
+## ✨ Features & Capabilities
 
-- **Built-in Web Server UI**: A sleek, CSS-styled responsive dashboard hosted directly on the ESP32.
-- **Mode 1 - Manual Control**: A D-Pad interface for full directional control (Forward, Reverse, Left, Right) plus a "Spin Combo" function.
-- **Mode 2 - Obstacle Avoidance**: Autonomous mode where the rover navigates independently, stops before obstacles (<25cm), and alternates turning direction.
-- **Mode 3 - Smart Explorer**: An advanced autonomous mode that scales motor speed proportionally based on distance. It includes emergency evasion maneuvers, "slow mode" near obstacles, and "turbo mode" on clear paths.
-- **Live Distance Tracking**: HC-SR04 distance readings are streamed to the web dashboard in real-time.
-
----
-
-## 🧰 Hardware & Connections
-
-### Parts Required
-- 1× ESP32 Development Board
-- 1× L298N Motor Driver
-- 1× HC-SR04 Ultrasonic Distance Sensor
-- DC Motors & Robot Chassis
-- 12V Battery Power Source
-
-### Wiring Guide
-
-Ensure correct power setup:
-- **Battery** → L298N 12V
-- **L298N GND** → ESP32 GND *[CRITICAL: Common Ground]*
-- **Motors** → L298N OUT1, OUT2, OUT3, OUT4
-- **HC-SR04 Power** → ESP32 VIN (5V) & GND
-
-#### ESP32 Pin Mapping
-
-| Component | Pin Function | ESP32 GPIO |
-|-----------|--------------|------------|
-| L298N     | IN1          | GPIO 26    |
-| L298N     | IN2          | GPIO 27    |
-| L298N     | IN3          | GPIO 14    |
-| L298N     | IN4          | GPIO 12    |
-| L298N     | ENA          | GPIO 25    |
-| L298N     | ENB          | GPIO 33    |
-| HC-SR04   | TRIG         | GPIO 13    |
-| HC-SR04   | ECHO         | GPIO 34 (Input-only, safe)|
+- 🌐 **Built-in Web Server UI**: A sleek, CSS-styled responsive dashboard hosted directly on the ESP32—no internet connection required!
+- 🕹️ **Mode 1 - Manual Control**: A tactile D-Pad interface for full directional control (Forward, Reverse, Left, Right) featuring a rapid "Spin Combo" function.
+- 🛡️ **Mode 2 - Obstacle Avoidance**: Autonomous navigation where the rover halts instantly prior to collision (<25cm) and intelligently alternates its turning vector.
+- 🤖 **Mode 3 - Smart Explorer**: An advanced AI-like mode that scales motor speed proportionally based on distance. Enjoy auto-evasion maneuvers, "slow-mo" tight cornering, and "turbo bounds" on straightaways.
+- 📏 **Live Distance Tracking**: HC-SR04 sonar data is continuously streamed right to the web dashboard UI in zero latency.
 
 ---
 
-## 🛠️ Arduino IDE Setup
+## 🧰 Hardware & Schematic
 
-This project uses the Arduino IDE. Please follow these steps carefully to ensure the ESP32 handles the web server and hardware correctly.
+### 🔌 Parts Required
+* **1×** ESP32 Development Board
+* **1×** L298N Motor Driver
+* **1×** HC-SR04 Ultrasonic Distance Sensor
+* **1×** DC Motors & Robot Chassis
+* **1×** 12V Battery Power Source
 
-### 1. Install ESP32 Board Support
-1. Open Arduino IDE. Go to **File > Preferences**.
-2. Add the following URL to *Additional Boards Manager URLs*:
+### ⚡ Wiring Guide
+
+Ensure complete power compliance:
+* **Battery** ➡️ L298N 12V
+* **L298N GND** ➡️ ESP32 GND *(CRITICAL: Common Ground is Required)*
+* **Motors** ➡️ L298N OUT1, OUT2, OUT3, OUT4
+* **HC-SR04 Power** ➡️ ESP32 VIN (5V) & GND
+
+> [!WARNING]
+> Do NOT power the ESP32 directly from 12V unless going through a compatible step-down converter. Using the L298N's 5V breakout is an acceptable alternative if the onboard regulator jumper is intact.
+
+#### 📍 ESP32 Pin Mapping Overview
+
+| Component | Pin Function | ESP32 GPIO | Description |
+|:---:|:---:|:---:|:---|
+| L298N | IN1 | **GPIO 26** | Motor A Direction 1 |
+| L298N | IN2 | **GPIO 27** | Motor A Direction 2 |
+| L298N | IN3 | **GPIO 14** | Motor B Direction 1 |
+| L298N | IN4 | **GPIO 12** | Motor B Direction 2 |
+| L298N | ENA | **GPIO 25** | Motor A PWM Speed |
+| L298N | ENB | **GPIO 33** | Motor B PWM Speed |
+| HC-SR04 | TRIG | **GPIO 13** | Ultrasonic Pulse Transmitter |
+| HC-SR04 | ECHO | **GPIO 34** | Ultrasonic Pulse Receiver *(Input-only)* |
+
+---
+
+## 🛠️ Arduino IDE Configuration
+
+Follow these steps carefully to ensure the ESP32 compiles the web server and PWM hardware signals perfectly.
+
+### 1. 📦 Install ESP32 Core Support
+1. Open Arduino IDE and traverse to **File > Preferences**.
+2. Add this URL to *Additional Boards Manager URLs*:
    `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
-3. Go to **Tools > Board > Boards Manager...**
+3. Traverse to **Tools > Board > Boards Manager...**
 4. Search for `esp32`.
-5. ⚠️ **CRITICAL: VERSION SELECTION** ⚠️ 
-   Select version **`2.0.17`** from the dropdown menu and click Install. *This specific version is required for optimal stability of the Wi-Fi and PWM libraries used in this project.*
 
-### 2. Configure Your Board
-- Go to **Tools > Board** and select your specific ESP32 board (e.g., *DOIT ESP32 DEVKIT V1* or *ESP32 Dev Module*).
-- Ensure the upload speed is set to `115200`.
+> [!IMPORTANT]
+> **CRITICAL VERSION SELECTION:** Select version **`2.0.17`** from the dropdown menu and click Install. This specific version is highly recommended for the stability of the Wi-Fi and PWM libraries executed in this sketch. Avoid newer 3.x.x series as they drastically refactored PWM headers!
 
-### 3. Flash the Code
-1. Open [`CODE/esp32_rover.ino`](CODE/esp32_rover.ino) in your Arduino IDE.
-2. Update the Wi-Fi credentials in the script to match your local network or desired hotspot:
+### 2. ⚙️ Initialise Your Board Profile
+* Go to **Tools > Board** and select your exact ESP32 model (e.g., *DOIT ESP32 DEVKIT V1* or *ESP32 Dev Module*).
+* Verify that the upload speed is fixed to `115200`.
+
+### 3. 🚀 Flash & Execute
+1. Open the source code [`CODE/esp32_rover.ino`](CODE/esp32_rover.ino) in your IDE.
+2. Hardcode your network credentials to map the Rover's Host:
    ```cpp
    const char* ssid     = "YOUR_SSID";
    const char* password = "YOUR_PASSWORD";
    ```
-3. Connect your ESP32 to your PC via USB.
-4. Select the corresponding COM port in **Tools > Port**.
-5. Click **Upload**.
+3. Physically interface the ESP32 to your PC via USB.
+4. Mount the target port via **Tools > Port**.
+5. Dispatch via **Upload**.
 
 ---
 
-## 🚀 Running the Rover
+## 🏎️ Piloting the Rover
 
-1. Once uploaded, open the **Serial Monitor** at baud rate `115200`.
-2. Press the **EN/RST** button on the ESP32.
-3. Wait for the `IP: xxx.xxx.xxx.xxx` to appear in the serial monitor.
-4. Connect your phone or computer to the same Wi-Fi network.
-5. Enter the given IP address into a web browser.
-6. Use the web dashboard and enjoy the drive!
+1. With the code flashed, initiate the **Serial Monitor** at baud rate `115200`.
+2. Tap the **EN/RST** button on the physical ESP32 chassis.
+3. Observe the prompt until `IP: xxx.xxx.xxx.xxx` bridges in the serial monitor.
+4. Join your mobile/PC to the identical Wi-Fi access point.
+5. Key the provided IP address into any modern web browser.
+6. The digital cockpit awaits... Start exploring!
 
----
-*Developed for Robotics Project.*
+<br>
+
+<div align="center">
+  <i>Conceived and assembled for Robotics Development.</i>
+  <br><br>
+  <b>Reach out & connect with the developer:</b>
+  <br><br>
+  <a href="https://www.linkedin.com/in/yash-developer/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Yash Developer"></a>
+  <a href="https://www.instagram.com/yash.developer"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram @yash.developer"></a>
+</div>
