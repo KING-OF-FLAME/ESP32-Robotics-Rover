@@ -47,8 +47,12 @@ An intelligent, WiFi-controlled robotics rover powered by the ESP32. Featuring a
 * **1×** ESP32 Development Board
 * **1×** L298N Motor Driver
 * **1×** HC-SR04 Ultrasonic Distance Sensor
-* **1×** DC Motors & Robot Chassis
-* **1×** 12V Battery Power Source
+* **1×** 4WD DC Motor Robot Chassis (with yellow wheels)
+* **3×** VIPOW 18650 Li-ion Batteries (3.7V, 2200mAh)
+* **1×** 3-Slot 18650 Battery Holder
+* **1×** Red Rocker Toggle Switch
+* **1×** Half-Size Breadboard & Jumper Wires
+* **1×** Soldering Kit (for reliable hardware assembly)
 
 ### ⚡ Wiring Guide
 
