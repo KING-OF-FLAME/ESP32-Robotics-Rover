@@ -20,13 +20,13 @@ An intelligent, WiFi-controlled robotics rover powered by the ESP32. Featuring a
 ## 📸 Project Showcase
 
 <p align="center">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.16%20PM.jpeg" width="32%" alt="Rover Photo 1">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM.jpeg" width="32%" alt="Rover Photo 2">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.18%20PM.jpeg" width="32%" alt="Rover Photo 3">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.16%20PM.jpeg" width="49%" alt="Rover Profile Left">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM.jpeg" width="49%" alt="Rover Profile Right">
 </p>
 <p align="center">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(1).jpeg" width="48%" alt="Rover Photo 4">
-  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(2).jpeg" width="48%" alt="Rover Photo 5">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(1).jpeg" width="32%" alt="Rover Front View">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.18%20PM.jpeg" width="32%" alt="Rover Top View">
+  <img src="iotCar%20Photos/WhatsApp%20Image%202026-04-19%20at%204.31.17%20PM%20(2).jpeg" width="32%" alt="Rover Top Diagonal">
 </p>
 
 ---
